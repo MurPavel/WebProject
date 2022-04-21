@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Загрузим файл</h1>
+  <form method="post" enctype="multipart/form-data">
+     <div class="form-group">
+          <label for="photo">Заголовок статьи</label>
+          <input type="text" class="form-control-file" name="title">
+      </div>
+
+
+      <div class="form-group">
+          <label for="photo">Контент</label>
+          <input type="text" class="form-control-file" name="content">
+      </div>
+
+
+      <div class="form-group">
+          <label for="photo">Изображние (необезательно)</label>
+          <input type="file" class="form-control-file" name="file">
+      </div>
+
+      <select name="type">
+          <option value="personage">Персонажи</option>
+          <option value="planets">Планеты</option>
+          <option value="chapter">Сюжет</option>
+          <option value="story">Истории</option>
+       </select>
+
+
+      <button type="submit" class="btn btn-primary">Отправить</button>
+  </form>
+{% endblock %}

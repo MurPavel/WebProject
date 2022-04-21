@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{title}}</h1>
+<img src="../{{news.icon}}">
+<p>{{news.content}}</p>
+<p class="card-text">Автор - <img src="../{{news.user.icon}}">{{news.user.name}}</p>
+{% if t == 1 %}
+            <a href="/sort-articles" class="btn btn-secondary">Назад</a>
+{% else %}
+            <a href="/" class="btn btn-secondary">Назад</a>
+{% endif %}
+<p class="text-info italic rounded-left">{{fact}}</p>
+
+
+{% endblock %}

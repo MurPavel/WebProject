@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Добавить админа</h1>
+    <div class="cardd">
+    {% for item in art%}
+        {%if item.status != 'main-admin' %}
+        <div class='c'>
+        <div class="card" style="width: 17.5rem;">
+            <img class="card-img-top" src="../{{item.icon}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.name}}</p>
+            </div>
+        </div>
+            <div class="we">
+                {% if item.status=='admin'%}
+        <a href="/del-admin/{{item.id}}" class="btn btn-secondary qw btn-danger">Удалить админа</a>
+                {% else %}
+        <a href="/add-admin/{{item.id}}" class="btn btn-secondary qw">Добавить админа</a>
+                {% endif %}
+                </div>
+        </div>
+        {% endif %}
+
+    {% endfor %}
+     </div>
+{% endblock %}

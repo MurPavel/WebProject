@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Предложения пользователей</h1>
+    <div class="cardd">
+    {% for item in art%}
+
+        <div class='c'>
+        <a href="/new-articles/{{item.id}}">
+        <div class="card" style="width: 17.5rem;">
+            <img class="card-img-top" src="../{{item.icon}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">Автор - <img src="../{{item.user.icon}}">{{item.user.name}}</p>
+            </div>
+        </div>
+        </a>
+            <div class="we">
+        <a href="/add-new-art/{{item.id}}" class="btn btn-secondary qw">Добавить статью</a>
+                <br>
+        <a href="/del-articles/{{item.id}}" class="btn btn-secondary">Удалить статью</a>
+                </div>
+        </div>
+
+    {% endfor %}
+     </div>
+{% endblock %}

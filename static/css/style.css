@@ -1,0 +1,70 @@
+.ups {
+	margin-top: 5rem;
+}
+
+img {
+	height: 20rem;
+}
+
+a {
+	color: black;
+	transition: color 0.2s ease-in;
+}
+
+a:hover {
+	text-decoration: none;
+	color: gray;
+}
+
+footer {
+	background-color: #f8f9fa;
+	margin-top: 8rem;
+	z-index: 100%;
+	width: 100%;
+}
+
+main {
+	box-sizing: border-box;
+	min-height: 33.05rem;
+}
+
+.card {
+	background-color: rgba(200, 200, 200, 0.1);
+	transition: background-color 0.1s ease-in;
+	margin-right: 0px;
+	height: 28rem;
+	width: 10rem;
+}
+
+.card:hover {
+	background-color: rgba(180, 180, 180, 0.2);
+}
+
+.cardd {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 3rem;
+	column-gap: 7rem;
+}
+
+.c {
+	align-self: flex-start;
+}
+
+.icon {
+	max-height: 50px;
+	max-width: 50px;
+}
+
+.btn {
+	margin: 5px;
+}
+p img{
+	max-height: 15px;
+	max-width: 15px;
+}
+
+
+.we {
+	display: block;
+}

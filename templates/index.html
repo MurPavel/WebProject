@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <div class="cardd">
+    {% for item in news%}
+        <div>
+        <a href="/articles/{{item.id}}">
+        <div class='c'>
+        <div class="card" style="width: 17.5rem;">
+            <img class="card-img-top" src="../{{item.icon}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">Автор - <img src="../{{item.user.icon}}">{{item.user.name}}</p>
+            </div>
+        </div>
+        </div>
+        </a>
+        <a class="btn btn-danger" href="/del-a/{{item.id}}">Удалить</a>
+    </div>
+    {% endfor %}
+     </div>
+{% endblock %}

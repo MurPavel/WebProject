@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{user.name}}</h1>
+<img src="../{{user.icon}}" class="icon">
+<p>{{user.about}}</p>
+<a href="articles" class="btn btn-secondary">Добавить статью</a>
+<a href="add-icon" class="btn btn-secondary">Сменить аватар</a><br>
+<a class="btn btn-danger" href="/logout">Выйти</a><br>
+{% if current_user.status == 'admin' or current_user.status == 'main-admin' %}
+            <a href="sort-articles" class="btn btn-secondary">Отсортировать статьи</a>
+{% endif %}
+{% if current_user.status == 'main-admin' %}
+            <a href="add-admin" class="btn btn-secondary">Роли пользователей</a>
+{% endif %}
+{% endblock %}
